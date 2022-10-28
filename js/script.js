@@ -66,13 +66,13 @@ const cvcHandler = (event) =>{
 const blankInputCheck = (input, err) =>{
 if (input.value.trim().length == 0 ){
 
+    input.classList.add('invalid');
+    
+    err.style.display = 'block';
     if(input.id == 'card-number'){
         err.textContent = "Can't be blank";
     }
-    input.classList.add('invalid');
-
-err.style.display = 'block';
-
+    
 }else{
     input.classList.remove('invalid');
 
